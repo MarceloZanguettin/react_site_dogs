@@ -21,7 +21,7 @@ const PhotoGet = () => {
       <input
         type="text"
         value={id}
-        onChange={([target]) => setId(targed.value)}
+        onChange={([target]) => setId(target.value)}
       />
       <button>Enviar</button>
     </form>
