@@ -4,9 +4,9 @@ import styles from './Image.module.css';
 const Image = ({ alt, ...props }) => {
   const [skeleton, setSkeleton] = React.useState(true);
 
-  function handleLoad({ targed }) {
+  function handleLoad({ target }) {
     setSkeleton(false);
-    EventTarget.style.opacity = 1;
+    target.style.opacity = 1;
   }
 
   return (
