@@ -1,60 +1,47 @@
-Dogs - Rede Social para Cachorros
-Este é um projeto de uma rede social exclusiva para cachorros, desenvolvida em React. A aplicação permite que utilizadores criem contas, façam login, postem fotos dos seus animais de estimação, visualizem um feed de fotos, comentem e acompanhem estatísticas de visualização.
+# Dogs - Rede Social Canina
 
-🚀 Tecnologias Utilizadas
-O projeto foi construído utilizando as seguintes tecnologias e bibliotecas:
+Uma rede social exclusiva para cachorros inspirada no Instagram, desenvolvida com React. O projeto permite que usuários postem fotos de seus cães, visualizem um feed global, gerenciem seus perfis e acompanhem estatísticas de engajamento.
 
-React 18: Biblioteca principal para a interface.
+## 🚀 Tecnologias
 
-Vite: Ferramenta de build e ambiente de desenvolvimento rápido.
+Este projeto foi construído utilizando as seguintes ferramentas:
 
-React Router Dom: Gestão de rotas da aplicação.
+- **React 18**: Biblioteca base para a interface.
+- **Vite**: Ferramenta de build e ambiente de desenvolvimento.
+- **React Router Dom**: Gerenciamento de rotas e navegação SPA.
+- **Victory**: Biblioteca para criação de gráficos estatísticos.
+- **Vite Plugin SVGR**: Para manipulação de SVGs como componentes.
+- **Hooks Personalizados**: Implementação de `useForm`, `useFetch` e `useMedia` para lógica reutilizável.
 
-Victory: Utilizada para a exibição de gráficos estatísticos.
+## ✨ Funcionalidades
 
-Vite Plugin SVGR: Permite a importação de SVGs como componentes React.
+- **Autenticação Completa**: Cadastro de usuários, login com validação de token JWT e recuperação de senha.
+- **Feed de Fotos**: Visualização de postagens com scroll infinito e carregamento dinâmico.
+- **Perfil do Usuário**: Área restrita para postar novas fotos (via formulário multipart), deletar fotos próprias e visualizar dados.
+- **Estatísticas**: Gráficos que mostram o total de acessos e postagens do usuário utilizando a API de stats.
+- **Interação**: Sistema de comentários em cada foto.
+- **Proteção de Rotas**: Acesso controlado a páginas sensíveis através de componentes de rota protegida.
 
-ESLint: Ferramenta de linting para manter a qualidade do código.
+## 📦 Como Instalar e Rodar
 
-🛠️ Funcionalidades
-Autenticação de Utilizador: Sistema de login e criação de conta com validação de Token JWT.
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/marcelozanguettin/react_site_dogs.git](https://github.com/marcelozanguettin/react_site_dogs.git)
+    ```
 
-Feed de Fotos: Visualização de fotos postadas por diferentes utilizadores com paginação.
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-Perfil do Utilizador: Área restrita para o utilizador gerir as suas fotos e visualizar estatísticas.
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
 
-Interação: Sistema de comentários nas fotos e opção de eliminar publicações próprias.
+## 🌐 API
 
-Recuperação de Password: Funcionalidade para recuperação e reset de palavra-passe através da API.
+O projeto consome a **Dogs API**, uma API REST desenvolvida especificamente para este contexto educacional, com endpoints para autenticação, usuários, fotos e comentários.
 
-Design Responsivo: Interface adaptável para diferentes tamanhos de ecrã.
-
-📂 Estrutura do Projeto
-Abaixo, os principais pontos da estrutura de pastas:
-
-src/Components: Contém todos os componentes visuais da aplicação (Login, Feed, Foto, User, etc.).
-
-src/Hooks: Custom hooks para gerir formulários, fetches e media queries.
-
-src/UserContext.jsx: Contexto global para gerir o estado de autenticação e dados do utilizador.
-
-src/api.jsx: Configuração centralizada de todos os endpoints da API (Dogs API).
-
-🔧 Configuração e Instalação
-Instalar dependências:
-
-Bash
-npm install
-Executar o projeto em modo de desenvolvimento:
-
-Bash
-npm run dev
-Gerar a build para produção:
-
-Bash
-npm run build
-🌐 API
-A aplicação consome a API oficial do curso da Origamid:
-https://dogsapi.origamid.dev/json
-
-Este projeto foi desenvolvido por Marcelo Zanguettin Pereira.
+---
+Desenvolvido por **Marcelo Zanguettin Pereira**.
