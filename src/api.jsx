@@ -19,7 +19,7 @@ export function TOKEN_VALIDATE_POST(token) {
     options: {
       method: 'POST',
       headers: {
-        Autorization: 'Bearer ' + token,
+        Authorization: 'Bearer ' + token,
       },
     },
   };
@@ -31,7 +31,7 @@ export function USER_GET(token) {
     options: {
       method: 'GET',
       headers: {
-        Autorization: 'Bearer ' + token,
+        Authorization: 'Bearer ' + token,
       },
     },
   };
@@ -56,7 +56,7 @@ export function PHOTO_POST(formData, token) {
     options: {
       method: 'POST',
       headers: {
-        Autorization: 'Bearer ' + token,
+        Authorization: 'Bearer ' + token,
       },
       body: formData,
     },
@@ -90,7 +90,7 @@ export function COMMENT_POST(id, body) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Autorization: 'Bearer ' + window.localStorage.getItem('token'),
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
       },
       body: JSON.stringify(body),
     },
@@ -103,7 +103,7 @@ export function PHOTO_DELETE(id) {
     options: {
       method: 'DELETE',
       headers: {
-        Autorization: 'Bearer ' + window.localStorage.getItem('token'),
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
       },
     },
   };

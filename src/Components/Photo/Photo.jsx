@@ -9,10 +9,10 @@ import Head from '../Helper/Head';
 
 const Photo = () => {
   const { id } = useParams();
-  const [data, loading, error, request] = useFetch();
+  const {data, loading, error, request} = useFetch();
 
   React.useEffect(() => {
-    const { url, options } = PHOTO_GET(id);
+    const { url, options } = PHOTO_GET({ id });
     request(url, options);
   }, [request, id]);
 
