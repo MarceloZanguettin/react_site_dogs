@@ -10,8 +10,11 @@ const FeedModal = ({ photo, setModalPhoto }) => {
   const { data, error, loading, request } = useFetch();
 
   React.useEffect(() => {
-    const { url, options } = PHOTO_GET(photo.id);
-    request(url, options);
+    if (photo && photo.id) {
+      const { url, options } = PHOTO_GET({ id: photo.id });
+      console.log('ID da foto recebido:', photo);
+      request(url, options);
+    }
   }, [photo, request]);
 
   function handleOutsideClick(event) {

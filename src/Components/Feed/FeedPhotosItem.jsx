@@ -7,12 +7,13 @@ const FeedPhotosItem = ({ photo, setModalPhoto }) => {
   const navigate = useNavigate();
 
   function handleClick() {
-    if (setModalPhoto) {
-      setModalPhoto(photo);
-    } else {
-      navigate(`/foto/${photo.id}`);
+    if (photo && photo.id) {
+      if (setModalPhoto) {
+        setModalPhoto(photo);
+      } else {
+        navigate(`/foto/${photo.id}`);
+      }
     }
-    
   }
 
   return (
