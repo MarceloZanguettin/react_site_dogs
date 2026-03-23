@@ -17,7 +17,7 @@ const User = () => {
       <UserHeader />
       <Routes>
         <Route path="/" element={<Feed user={data.id} />} />
-        <Route path="posta" element={<UserPhotoPost />} />
+        <Route path="postar" element={<UserPhotoPost />} />
         <Route path="estatisticas" element={<UserStats />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
